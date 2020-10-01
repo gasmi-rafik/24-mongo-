@@ -1,0 +1,13 @@
+use contact
+> db.createCollection('contactlist')
+> db.contactlist.insert([{Last_name:'Ben Lahmer',First_name:'Fares', Email:'fares@gmail.com',age:26 },{Last_name:'Kefi',First_Name:'Sief',Email:'kefi@gmail.com',age:15},{Last_name:'Fatnassi',First_name:'Sarra', Email:'sarra.f@gmail.com',age:40},{Last_name:'Ben Yahia', First_name:'Rym', age:4},{Last_name:'Cherif', First_name:'Sami', age:3}])
+> db.contactlist.find().pretty()
+> db.contactlist.find(null,{name:1})
+> db.contactlist.find({age:{$gt:> 18}})
+> db.contactlist.find({age:{$gt: >18}} ,{Last_name: /ah/})
+> db.contactlist.update({Last_name:"Kefi"},{ $set:{First_Name:"Anis"}})
+> db.contactlist.remove({age:{$lt: < 5}})
+> db.contactlist.find()
+
+
+
